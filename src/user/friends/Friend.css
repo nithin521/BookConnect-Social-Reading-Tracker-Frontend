@@ -1,0 +1,36 @@
+.userContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: red;
+    max-width: 700px;
+    margin: 40px auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: rgba(169, 156, 156, 0.5);
+    min-height: 80px;
+    text-align: center;
+}
+.userDetails h3{
+    padding-left: 10px;
+}
+.friends{
+    min-height: calc(100vh - 87px);
+    height: 100%;
+}
+.btn{
+    max-width: 100px;
+    width: 100%;
+    margin: 10px 0 ;
+}
+.userContainer img{
+    width: 75px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        padding-left: 5px;
+}
+button:disabled{
+    background-color: black;
+    color: black;
+}

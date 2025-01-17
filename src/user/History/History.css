@@ -1,0 +1,50 @@
+.history {
+  display: flex;
+  overflow-y: auto;
+  /* color: black !important; */
+}
+.history .right {
+  flex: 0.85;
+  min-height: calc(100vh - 65px);
+  padding: 0px 2%;
+}
+.history .left {
+  flex: 0.15;
+  min-height: calc(100vh - 65px);
+  padding: 0px 2%;
+  width: 100%;
+  border-right: 2px solid grey;
+}
+.history .left > *:hover,
+.history .active {
+  background-color: lightgrey;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  color: black;
+}
+.history .active {
+  background-color: grey;
+}
+.history .left h3 {
+  padding: 10px 0;
+}
+/* .active {
+  background-color: aliceblue;
+  border-radius: 50px;
+} */
+@media screen and (max-width: 472px) {
+  .history {
+    flex-direction: column;
+  }
+}
+.dark .right {
+  /* color: rgba(255, 240, 240, 0.6); */
+}
+.dark .right .book_title {
+  color: whitesmoke;
+}
+
+.library_author {
+  color: whitesmoke !important;
+}

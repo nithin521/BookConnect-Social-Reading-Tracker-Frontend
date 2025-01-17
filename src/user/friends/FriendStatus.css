@@ -1,0 +1,54 @@
+.completedBooks,
+.to_read,
+.reading,
+.favorites {
+  display: flex;
+  width: 90%;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0px 0 40px;
+  border-bottom: 2px solid black;
+  /* flex-direction: column; */
+}
+.userDetails {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  max-width: 300px;
+  margin: 50px 0 50px;
+  margin-left: 60px;
+}
+.userDetails img {
+  width: 75px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* .userDetails >*{
+    margin: 0 0px;
+} */
+.completedBooks > h2,
+.to_read > h2,
+.reading > h2,
+.favorites > h2 {
+  width: 100%;
+}
+.box .title,
+.box .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.innerbox {
+  height: 200px;
+}
+.fbook-box {
+  width: 250px;
+}
+
+.fbook-detail-wrapper h3 {
+  text-align: center;
+  height: 60px;
+}
