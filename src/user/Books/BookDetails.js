@@ -8,15 +8,15 @@ const BookDetails = () => {
   const { state } = useLocation();
   const { user } = useContext(MyContext);
   const [Data, setData] = useState({
-    Completed: false,
-    To_Read: false,
-    Reading: false,
-    Favorites: false,
+    completed: false,
+    to_read: false,
+    reading: false,
+    favorites: false,
   });
   useEffect(() => {
     async function getuserPreference() {
       try {
-        const arr = ["Completed", "To_Read", "Reading", "Favorites"];
+        const arr = ["completed", "to_read", "reading", "favorites"];
         for (const ele of arr) {
           const response = await axios.get(
             `${process.env.REACT_APP_BACKEND_URL}/getPreferences/${user?.[0]?.userId}/${ele}/${state.book_id}`
@@ -178,3 +178,4 @@ const BookDetails = () => {
 };
 
 export default BookDetails;
+
