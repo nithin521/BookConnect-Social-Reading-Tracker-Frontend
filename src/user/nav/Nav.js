@@ -11,7 +11,7 @@ const Nav = () => {
   const { user, setGenres, genre, setUser } = useContext(MyContext);
   const [menu, setMenu] = useState(false);
   const navigate = useNavigate();
-  const [requestsCount, setRequestsCount] = useState(0);
+  // const [requestsCount, setRequestsCount] = useState(0);
 
   useEffect(() => {
     async function getGenre() {
@@ -20,20 +20,20 @@ const Nav = () => {
       setGenres(genres);
       console.log(user);
 
-      let requests =
-        user.length !== 0 &&
-        (await axios.get(
-          //${process.env.REACT_APP_BACKEND_URL}/getUsers//14
-          `${process.env.REACT_APP_BACKEND_URL}/requests/${user?.[0].userId}`,
-          { withCredentials: true }
-        ));
-      console.log(requests);
+      // let requests =
+      //   user.length !== 0 &&
+      //   (await axios.get(
+      //     //${process.env.REACT_APP_BACKEND_URL}/getUsers//14
+      //     `${process.env.REACT_APP_BACKEND_URL}/requests/${user?.[0].userId}`,
+      //     { withCredentials: true },
+      //   ));
+      // console.log(requests);
 
-      let reqCount = 0;
-      for (let i = 0; i < requests.data?.freindsId?.length; i++) {
-        if (requests.data.freindsId?.[i].status === "pending") reqCount++;
-      }
-      setRequestsCount(reqCount);
+      // let reqCount = 0;
+      // for (let i = 0; i < requests.data?.freindsId?.length; i++) {
+      //   if (requests.data.freindsId?.[i].status === "pending") reqCount++;
+      // }
+      // setRequestsCount(reqCount);
     }
     getGenre();
   }, [setGenres, user]);
@@ -73,7 +73,7 @@ const Nav = () => {
         />
       </div>
       <div className={`${!menu ? "menu" : "sm"}`}>
-        <div className="genre-container">
+        {/* <div className="genre-container">
           <h3 className=" nav-link">Genres</h3>
           <div className="dropdown">
             {genre?.map((ele) => (
@@ -86,20 +86,19 @@ const Nav = () => {
               </Link>
             ))}
           </div>
-        </div>
-        <Link to="/history" style={{ textDecoration: "none" }}>
+        </div> */}
+        {/* <Link to="/history" style={{ textDecoration: "none" }}>
           <h3 className="nav-link">My Library</h3>
-        </Link>
-        <Link to="/friends" style={{ textDecoration: "none" }}>
+        </Link> */}
+        {/* <Link to="/friends" style={{ textDecoration: "none" }}>
           <h3 className="nav-link">Find Friends</h3>
         </Link>
-        {/* <div></div> */}
         <Link to="/requests" style={{ textDecoration: "none" }}>
           <h3 className="nav-link">
             Requests{" "}
             <sup>{requestsCount ? requestsCount : <span>&#x25cf;</span>}</sup>
           </h3>
-        </Link>
+        </Link> */}
         {/* <Link to="/recent" style={{ textDecoration: "none" }}>
           <h3 className="link">Most Recent</h3>
         </Link> */}
@@ -112,12 +111,15 @@ const Nav = () => {
           />
           <div className="Ldropdown">
             <Link to="/" style={{ textDecoration: "none" }}>
-              <Link to="/userFriends" style={{ textDecoration: "none" }}>
+              {/* <Link to="/userFriends" style={{ textDecoration: "none" }}>
                 <h3 className="nav-link">Friends</h3>
-              </Link>
+              </Link> */}
               {/* <Link to="/profile" style={{ textDecoration: "none" }}>
                 <h3 className="nav-link">Profile</h3>
               </Link> */}
+              <Link to="/history" style={{ textDecoration: "none" }}>
+                <h3 className="nav-link">My Library</h3>
+              </Link>
               <h3 className="nav-link" onClick={handleLogOut}>
                 Logout
               </h3>

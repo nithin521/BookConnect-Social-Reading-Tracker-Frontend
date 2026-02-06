@@ -36,7 +36,7 @@ const Home = () => {
         setLoading(true);
         let result = await axios.get(
           `${process.env.REACT_APP_BACKEND_URL}/signIn/user`,
-          { withCredentials: true }
+          { withCredentials: true },
         );
         console.log(result.data);
 

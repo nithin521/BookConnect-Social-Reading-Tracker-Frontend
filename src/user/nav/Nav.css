@@ -26,7 +26,7 @@
 .menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   padding: 0px 30px;
   width: 60%;
   margin-left: auto;
@@ -80,7 +80,7 @@ img {
   background: #3a3a3c;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 0px 25px;
+  padding: 0px 30px;
   visibility: hidden;
 }
 .imageContainer {
@@ -89,6 +89,7 @@ img {
 }
 .imageContainer:hover .Ldropdown {
   visibility: visible;
+  width: 190px;
 }
 .hamburger {
   width: 40px;
