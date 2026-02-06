@@ -136,7 +136,7 @@ const BookDetails = () => {
             type="checkbox"
             id="to_Read"
             onChange={handleInput}
-            checked={Data.To_Read ? true : false}
+            checked={Data.to_Read ? true : false}
           />
           <span> To Read</span>
         </div>
@@ -147,7 +147,7 @@ const BookDetails = () => {
             type="checkbox"
             id="reading"
             onChange={handleInput}
-            checked={Data.Reading ? true : false}
+            checked={Data.reading ? true : false}
           />
           <span> Reading</span>
         </div>
@@ -158,7 +158,7 @@ const BookDetails = () => {
             type="checkbox"
             id="completed"
             onChange={handleInput}
-            checked={Data.Completed ? true : false}
+            checked={Data.completed ? true : false}
           />
           <span> Completed</span>
         </div>
@@ -168,7 +168,7 @@ const BookDetails = () => {
             type="checkbox"
             id="favorites"
             onChange={handleInput}
-            checked={Data.Favorites ? true : false}
+            checked={Data.favorites ? true : false}
           />
           <span> Favourites</span>
         </div>
@@ -178,5 +178,6 @@ const BookDetails = () => {
 };
 
 export default BookDetails;
+
 
 
